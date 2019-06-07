@@ -1,0 +1,14 @@
+https://github.com/plotly/
+https://dash.plot.ly/getting-started
+https://github.com/plotly/documentation/tree/gh-pages
+
+plotly
+
+https://codepen.io/tag/plotly/2/
+
+git 只下载github指定文件夹
+git init
+git remote rm origin
+git config core.sparseCheckout true
+git remote add -f origin git://...
+git checkout brachname or foldname

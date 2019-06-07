@@ -4,5 +4,7 @@
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github_dash/dash" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github_dash/documentation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github_dash/documentation/documentation" vcs="Git" />
   </component>
 </project>
