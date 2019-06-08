@@ -1,0 +1,2869 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://dash.plot.ly/external-resources -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.VirtualSelectGrid {
+  z-index: 1;
+}
+
+.VirtualizedSelectOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 .5rem;
+}
+.VirtualizedSelectFocusedOption {
+  background-color: rgba(0, 126, 255, 0.1);
+}
+.VirtualizedSelectDisabledOption {
+  opacity: 0.5;
+}
+.VirtualizedSelectSelectedOption {
+  font-weight: bold;
+}
+</style><style type="text/css">/* Collection default theme */
+
+.ReactVirtualized__Collection {
+}
+
+.ReactVirtualized__Collection__innerScrollContainer {
+}
+
+/* Grid default theme */
+
+.ReactVirtualized__Grid {
+}
+
+.ReactVirtualized__Grid__innerScrollContainer {
+}
+
+/* Table default theme */
+
+.ReactVirtualized__Table {
+}
+
+.ReactVirtualized__Table__Grid {
+}
+
+.ReactVirtualized__Table__headerRow {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ReactVirtualized__Table__row {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ReactVirtualized__Table__headerTruncatedText {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ReactVirtualized__Table__headerColumn,
+.ReactVirtualized__Table__rowColumn {
+  margin-right: 10px;
+  min-width: 0px;
+}
+.ReactVirtualized__Table__rowColumn {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ReactVirtualized__Table__headerColumn:first-of-type,
+.ReactVirtualized__Table__rowColumn:first-of-type {
+  margin-left: 10px;
+}
+.ReactVirtualized__Table__sortableHeaderColumn {
+  cursor: pointer;
+}
+
+.ReactVirtualized__Table__sortableHeaderIconContainer {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ReactVirtualized__Table__sortableHeaderIcon {
+  -webkit-flex: 0 0 24px;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+/* List default theme */
+
+.ReactVirtualized__List {
+}
+</style><style type="text/css">.rc-slider {
+  position: relative;
+  height: 14px;
+  padding: 5px 0;
+  width: 100%;
+  border-radius: 6px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.rc-slider * {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.rc-slider-rail {
+  position: absolute;
+  width: 100%;
+  background-color: #e9e9e9;
+  height: 4px;
+}
+.rc-slider-track {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  border-radius: 6px;
+  background-color: #abe2fb;
+}
+.rc-slider-handle {
+  position: absolute;
+  margin-left: -7px;
+  margin-top: -5px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: solid 2px #96dbfa;
+  background-color: #fff;
+}
+.rc-slider-handle:hover {
+  border-color: #57c5f7;
+}
+.rc-slider-handle-active:active {
+  border-color: #57c5f7;
+  box-shadow: 0 0 5px #57c5f7;
+}
+.rc-slider-mark {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+}
+.rc-slider-mark-text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  color: #999;
+}
+.rc-slider-mark-text-active {
+  color: #666;
+}
+.rc-slider-step {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+}
+.rc-slider-dot {
+  position: absolute;
+  bottom: -2px;
+  margin-left: -4px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #e9e9e9;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.rc-slider-dot:first-child {
+  margin-left: -4px;
+}
+.rc-slider-dot:last-child {
+  margin-left: -4px;
+}
+.rc-slider-dot-active {
+  border-color: #96dbfa;
+}
+.rc-slider-disabled {
+  background-color: #e9e9e9;
+}
+.rc-slider-disabled .rc-slider-track {
+  background-color: #ccc;
+}
+.rc-slider-disabled .rc-slider-handle,
+.rc-slider-disabled .rc-slider-dot {
+  border-color: #ccc;
+  background-color: #fff;
+  cursor: not-allowed;
+}
+.rc-slider-disabled .rc-slider-mark-text,
+.rc-slider-disabled .rc-slider-dot {
+  cursor: not-allowed !important;
+}
+.rc-slider-vertical {
+  width: 14px;
+  height: 100%;
+  padding: 0 5px;
+}
+.rc-slider-vertical .rc-slider-rail {
+  height: 100%;
+  width: 4px;
+}
+.rc-slider-vertical .rc-slider-track {
+  left: 5px;
+  bottom: 0;
+  width: 4px;
+}
+.rc-slider-vertical .rc-slider-handle {
+  margin-left: -5px;
+  margin-bottom: -7px;
+}
+.rc-slider-vertical .rc-slider-mark {
+  top: 0;
+  left: 18px;
+  height: 100%;
+}
+.rc-slider-vertical .rc-slider-step {
+  height: 100%;
+  width: 4px;
+}
+.rc-slider-vertical .rc-slider-dot {
+  left: 2px;
+  margin-bottom: -4px;
+}
+.rc-slider-vertical .rc-slider-dot:first-child {
+  margin-bottom: -4px;
+}
+.rc-slider-vertical .rc-slider-dot:last-child {
+  margin-bottom: -4px;
+}
+.rc-slider-tooltip-zoom-down-enter,
+.rc-slider-tooltip-zoom-down-appear {
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: block !important;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.rc-slider-tooltip-zoom-down-leave {
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: block !important;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.rc-slider-tooltip-zoom-down-enter.rc-slider-tooltip-zoom-down-enter-active,
+.rc-slider-tooltip-zoom-down-appear.rc-slider-tooltip-zoom-down-appear-active {
+  -webkit-animation-name: rcSliderTooltipZoomDownIn;
+          animation-name: rcSliderTooltipZoomDownIn;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.rc-slider-tooltip-zoom-down-leave.rc-slider-tooltip-zoom-down-leave-active {
+  -webkit-animation-name: rcSliderTooltipZoomDownOut;
+          animation-name: rcSliderTooltipZoomDownOut;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.rc-slider-tooltip-zoom-down-enter,
+.rc-slider-tooltip-zoom-down-appear {
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+          animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+.rc-slider-tooltip-zoom-down-leave {
+  -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+@-webkit-keyframes rcSliderTooltipZoomDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@keyframes rcSliderTooltipZoomDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes rcSliderTooltipZoomDownOut {
+  0% {
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+}
+@keyframes rcSliderTooltipZoomDownOut {
+  0% {
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+}
+.rc-slider-tooltip {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  visibility: visible;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.rc-slider-tooltip * {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.rc-slider-tooltip-hidden {
+  display: none;
+}
+.rc-slider-tooltip-placement-top {
+  padding: 4px 0 8px 0;
+}
+.rc-slider-tooltip-inner {
+  padding: 6px 2px;
+  min-width: 24px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #6c6c6c;
+  border-radius: 6px;
+  box-shadow: 0 0 4px #d9d9d9;
+}
+.rc-slider-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.rc-slider-tooltip-placement-top .rc-slider-tooltip-arrow {
+  bottom: 4px;
+  left: 50%;
+  margin-left: -4px;
+  border-width: 4px 4px 0;
+  border-top-color: #6c6c6c;
+}
+</style><style type="text/css">.Select,.Select-control{position:relative}.Select-control,.Select-input>input{width:100%;cursor:default;outline:0}.Select-arrow-zone,.Select-clear-zone,.Select-loading-zone{text-align:center;cursor:pointer}.Select,.Select div,.Select input,.Select span{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.Select.is-disabled>.Select-control{background-color:#f9f9f9}.Select.is-disabled>.Select-control:hover{box-shadow:none}.Select.is-disabled .Select-arrow-zone{cursor:default;pointer-events:none;opacity:.35}.Select-control{background-color:#fff;border-radius:4px;border:1px solid #ccc;color:#333;display:table;border-spacing:0;border-collapse:separate;height:36px;overflow:hidden}.is-searchable.is-focused:not(.is-open)>.Select-control,.is-searchable.is-open>.Select-control{cursor:text}.Select-control:hover{box-shadow:0 1px 0 rgba(0,0,0,.06)}.Select-control .Select-input:focus{outline:0}.is-open>.Select-control{border-bottom-right-radius:0;border-bottom-left-radius:0;background:#fff;border-color:#b3b3b3 #ccc #d9d9d9}.is-open>.Select-control .Select-arrow{top:-2px;border-color:transparent transparent #999;border-width:0 5px 5px}.is-focused:not(.is-open)>.Select-control{border-color:#007eff;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 0 3px rgba(0,126,255,.1)}.Select--single>.Select-control .Select-value,.Select-placeholder{bottom:0;color:#aaa;left:0;line-height:34px;padding-left:10px;padding-right:10px;position:absolute;right:0;top:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.has-value.Select--single>.Select-control .Select-value .Select-value-label,.has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label{color:#333}.has-value.Select--single>.Select-control .Select-value a.Select-value-label,.has-value.is-pseudo-focused.Select--single>.Select-control .Select-value a.Select-value-label{cursor:pointer;text-decoration:none}.has-value.Select--single>.Select-control .Select-value a.Select-value-label:focus,.has-value.Select--single>.Select-control .Select-value a.Select-value-label:hover,.has-value.is-pseudo-focused.Select--single>.Select-control .Select-value a.Select-value-label:focus,.has-value.is-pseudo-focused.Select--single>.Select-control .Select-value a.Select-value-label:hover{color:#007eff;outline:0;text-decoration:underline}.Select-input{height:34px;padding-left:10px;padding-right:10px;vertical-align:middle}.Select-input>input{background:none;border:0;box-shadow:none;display:inline-block;font-family:inherit;font-size:inherit;margin:0;line-height:14px;padding:8px 0 12px;-webkit-appearance:none}.Select-loading,.Select-loading-zone{width:16px;position:relative;vertical-align:middle}.is-focused .Select-input>input{cursor:text}.has-value.is-pseudo-focused .Select-input{opacity:0}.Select-control:not(.is-searchable)>.Select-input{outline:0}.Select-loading-zone{display:table-cell}.Select-loading{-webkit-animation:Select-animation-spin .4s infinite linear;-o-animation:Select-animation-spin .4s infinite linear;animation:Select-animation-spin .4s infinite linear;height:16px;box-sizing:border-box;border-radius:50%;border:2px solid #ccc;border-right-color:#333;display:inline-block}.Select-clear-zone{-webkit-animation:Select-animation-fadeIn .2s;-o-animation:Select-animation-fadeIn .2s;animation:Select-animation-fadeIn .2s;color:#999;display:table-cell;position:relative;vertical-align:middle;width:17px}.Select-clear-zone:hover{color:#D0021B}.Select-clear{display:inline-block;font-size:18px;line-height:1}.Select--multi .Select-clear-zone{width:17px}.Select-arrow-zone{display:table-cell;position:relative;vertical-align:middle;width:25px;padding-right:5px}.Select--multi .Select-multi-value-wrapper,.Select-arrow{display:inline-block}.Select-arrow{border-color:#999 transparent transparent;border-style:solid;border-width:5px 5px 2.5px;height:0;width:0;position:relative}.Select-arrow-zone:hover>.Select-arrow,.is-open .Select-arrow{border-top-color:#666}.Select .Select-aria-only{display:inline-block;height:1px;width:1px;margin:-1px;clip:rect(0,0,0,0);overflow:hidden;float:left}.Select-noresults,.Select-option{box-sizing:border-box;display:block;padding:8px 10px}@-webkit-keyframes Select-animation-fadeIn{from{opacity:0}to{opacity:1}}@keyframes Select-animation-fadeIn{from{opacity:0}to{opacity:1}}.Select-menu-outer{border-bottom-right-radius:4px;border-bottom-left-radius:4px;background-color:#fff;border:1px solid #ccc;border-top-color:#e6e6e6;box-shadow:0 1px 0 rgba(0,0,0,.06);box-sizing:border-box;margin-top:-1px;max-height:200px;position:absolute;top:100%;width:100%;z-index:1;-webkit-overflow-scrolling:touch}.Select-menu{max-height:198px;overflow-y:auto}.Select-option{background-color:#fff;color:#666;cursor:pointer}.Select-option:last-child{border-bottom-right-radius:4px;border-bottom-left-radius:4px}.Select-option.is-selected{background-color:#f5faff;background-color:rgba(0,126,255,.04);color:#333}.Select-option.is-focused{background-color:#ebf5ff;background-color:rgba(0,126,255,.08);color:#333}.Select-option.is-disabled{color:#ccc;cursor:default}.Select-noresults{color:#999;cursor:default}.Select--multi .Select-input{vertical-align:middle;margin-left:10px;padding:0}.Select--multi.has-value .Select-input{margin-left:5px}.Select--multi .Select-value{background-color:#ebf5ff;background-color:rgba(0,126,255,.08);border-radius:2px;border:1px solid #c2e0ff;border:1px solid rgba(0,126,255,.24);color:#007eff;display:inline-block;font-size:.9em;line-height:1.4;margin-left:5px;margin-top:5px;vertical-align:top}.Select--multi .Select-value-icon,.Select--multi .Select-value-label{display:inline-block;vertical-align:middle}.Select--multi .Select-value-label{border-bottom-right-radius:2px;border-top-right-radius:2px;cursor:default;padding:2px 5px}.Select--multi a.Select-value-label{color:#007eff;cursor:pointer;text-decoration:none}.Select--multi a.Select-value-label:hover{text-decoration:underline}.Select--multi .Select-value-icon{cursor:pointer;border-bottom-left-radius:2px;border-top-left-radius:2px;border-right:1px solid #c2e0ff;border-right:1px solid rgba(0,126,255,.24);padding:1px 5px 3px}.Select--multi .Select-value-icon:focus,.Select--multi .Select-value-icon:hover{background-color:#d8eafd;background-color:rgba(0,113,230,.08);color:#0071e6}.Select--multi .Select-value-icon:active{background-color:#c2e0ff;background-color:rgba(0,126,255,.24)}.Select--multi.is-disabled .Select-value{background-color:#fcfcfc;border:1px solid #e3e3e3;color:#333}.Select--multi.is-disabled .Select-value-icon{cursor:not-allowed;border-right:1px solid #e3e3e3}.Select--multi.is-disabled .Select-value-icon:active,.Select--multi.is-disabled .Select-value-icon:focus,.Select--multi.is-disabled .Select-value-icon:hover{background-color:#fcfcfc}@keyframes Select-animation-spin{to{transform:rotate(1turn)}}@-webkit-keyframes Select-animation-spin{to{-webkit-transform:rotate(1turn)}}</style><style type="text/css">.dash-logout-btn {
+    padding: 1rem;
+    background-color: #119DFF;
+    border: 1px solid #119DFF;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dash-logout-btn:hover, .dash-logout-btn:focus {
+    background-color: #0d76bf;
+    border: 1px solid #0d76bf;
+}
+
+.dash-logout-frame {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+</style><style type="text/css">.PresetDateRangePicker_panel {
+  padding: 0 22px 11px
+}
+.PresetDateRangePicker_button {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  background: 0 0;
+  border: 2px solid #00a699;
+  color: #00a699;
+  padding: 4px 12px;
+  margin-right: 8px;
+  font: inherit;
+  font-weight: 700;
+  line-height: normal;
+  overflow: visible;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer
+}
+.PresetDateRangePicker_button:active {
+  outline: 0
+}
+.PresetDateRangePicker_button__selected {
+  color: #fff;
+  background: #00a699
+}
+.SingleDatePickerInput {
+  display: inline-block;
+  background-color: #fff
+}
+.SingleDatePickerInput__withBorder {
+  border-radius: 2px;
+  border: 1px solid #dbdbdb
+}
+.SingleDatePickerInput__rtl {
+  direction: rtl
+}
+.SingleDatePickerInput__disabled {
+  background-color: #f2f2f2
+}
+.SingleDatePickerInput__block {
+  display: block
+}
+.SingleDatePickerInput__showClearDate {
+  padding-right: 30px
+}
+.SingleDatePickerInput_clearDate {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px 0 5px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.SingleDatePickerInput_clearDate__default:focus,
+.SingleDatePickerInput_clearDate__default:hover {
+  background: #dbdbdb;
+  border-radius: 50%
+}
+.SingleDatePickerInput_clearDate__small {
+  padding: 6px
+}
+.SingleDatePickerInput_clearDate__hide {
+  visibility: hidden
+}
+.SingleDatePickerInput_clearDate_svg {
+  fill: #82888a;
+  height: 12px;
+  width: 15px;
+  vertical-align: middle
+}
+.SingleDatePickerInput_clearDate_svg__small {
+  height: 9px
+}
+.SingleDatePickerInput_calendarIcon {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+  margin: 0 5px 0 10px
+}
+.SingleDatePickerInput_calendarIcon_svg {
+  fill: #82888a;
+  height: 15px;
+  width: 14px;
+  vertical-align: middle
+}
+.SingleDatePicker {
+  position: relative;
+  display: inline-block
+}
+.SingleDatePicker__block {
+  display: block
+}
+.SingleDatePicker_picker {
+  z-index: 1;
+  background-color: #fff;
+  position: absolute
+}
+.SingleDatePicker_picker__rtl {
+  direction: rtl
+}
+.SingleDatePicker_picker__directionLeft {
+  left: 0
+}
+.SingleDatePicker_picker__directionRight {
+  right: 0
+}
+.SingleDatePicker_picker__portal {
+  background-color: rgba(0,0,0,.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%
+}
+.SingleDatePicker_picker__fullScreenPortal {
+  background-color: #fff
+}
+.SingleDatePicker_closeButton {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  z-index: 2
+}
+.SingleDatePicker_closeButton:focus,
+.SingleDatePicker_closeButton:hover {
+  color: darken(#cacccd,10%);
+  text-decoration: none
+}
+.SingleDatePicker_closeButton_svg {
+  height: 15px;
+  width: 15px;
+  fill: #cacccd
+}
+.DayPickerKeyboardShortcuts_buttonReset {
+  background: 0 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  cursor: pointer;
+  font-size: 14px
+}
+.DayPickerKeyboardShortcuts_buttonReset:active {
+  outline: 0
+}
+.DayPickerKeyboardShortcuts_show {
+  width: 33px;
+  height: 26px;
+  position: absolute;
+  z-index: 2
+}
+.DayPickerKeyboardShortcuts_show::before {
+  content: "";
+  display: block;
+  position: absolute
+}
+.DayPickerKeyboardShortcuts_show__bottomRight {
+  bottom: 0;
+  right: 0
+}
+.DayPickerKeyboardShortcuts_show__bottomRight::before {
+  border-top: 26px solid transparent;
+  border-right: 33px solid #00a699;
+  bottom: 0;
+  right: 0
+}
+.DayPickerKeyboardShortcuts_show__bottomRight:hover::before {
+  border-right: 33px solid #008489
+}
+.DayPickerKeyboardShortcuts_show__topRight {
+  top: 0;
+  right: 0
+}
+.DayPickerKeyboardShortcuts_show__topRight::before {
+  border-bottom: 26px solid transparent;
+  border-right: 33px solid #00a699;
+  top: 0;
+  right: 0
+}
+.DayPickerKeyboardShortcuts_show__topRight:hover::before {
+  border-right: 33px solid #008489
+}
+.DayPickerKeyboardShortcuts_show__topLeft {
+  top: 0;
+  left: 0
+}
+.DayPickerKeyboardShortcuts_show__topLeft::before {
+  border-bottom: 26px solid transparent;
+  border-left: 33px solid #00a699;
+  top: 0;
+  left: 0
+}
+.DayPickerKeyboardShortcuts_show__topLeft:hover::before {
+  border-left: 33px solid #008489
+}
+.DayPickerKeyboardShortcuts_showSpan {
+  color: #fff;
+  position: absolute
+}
+.DayPickerKeyboardShortcuts_showSpan__bottomRight {
+  bottom: 0;
+  right: 5px
+}
+.DayPickerKeyboardShortcuts_showSpan__topRight {
+  top: 1px;
+  right: 5px
+}
+.DayPickerKeyboardShortcuts_showSpan__topLeft {
+  top: 1px;
+  left: 5px
+}
+.DayPickerKeyboardShortcuts_panel {
+  overflow: auto;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  padding: 22px;
+  margin: 33px;
+  text-align: left
+}
+.DayPickerKeyboardShortcuts_title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0
+}
+.DayPickerKeyboardShortcuts_list {
+  list-style: none;
+  padding: 0;
+  font-size: 14px
+}
+.DayPickerKeyboardShortcuts_close {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  z-index: 2
+}
+.DayPickerKeyboardShortcuts_close:active {
+  outline: 0
+}
+.DayPickerKeyboardShortcuts_closeSvg {
+  height: 15px;
+  width: 15px;
+  fill: #cacccd
+}
+.DayPickerKeyboardShortcuts_closeSvg:focus,
+.DayPickerKeyboardShortcuts_closeSvg:hover {
+  fill: #82888a
+}
+.CalendarDay {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center
+}
+.CalendarDay:active {
+  outline: 0
+}
+.CalendarDay__defaultCursor {
+  cursor: default
+}
+.CalendarDay__default {
+  border: 1px solid #e4e7e7;
+  color: #484848;
+  background: #fff
+}
+.CalendarDay__default:hover {
+  background: #e4e7e7;
+  border: 1px solid #e4e7e7;
+  color: inherit
+}
+.CalendarDay__hovered_offset {
+  background: #f4f5f5;
+  border: 1px double #e4e7e7;
+  color: inherit
+}
+.CalendarDay__outside {
+  border: 0;
+  background: #fff;
+  color: #484848
+}
+.CalendarDay__outside:hover {
+  border: 0
+}
+.CalendarDay__blocked_minimum_nights {
+  background: #fff;
+  border: 1px solid #eceeee;
+  color: #cacccd
+}
+.CalendarDay__blocked_minimum_nights:active,
+.CalendarDay__blocked_minimum_nights:hover {
+  background: #fff;
+  color: #cacccd
+}
+.CalendarDay__highlighted_calendar {
+  background: #ffe8bc;
+  color: #484848
+}
+.CalendarDay__highlighted_calendar:active,
+.CalendarDay__highlighted_calendar:hover {
+  background: #ffce71;
+  color: #484848
+}
+.CalendarDay__selected_span {
+  background: #66e2da;
+  border: 1px double #33dacd;
+  color: #fff
+}
+.CalendarDay__selected_span:active,
+.CalendarDay__selected_span:hover {
+  background: #33dacd;
+  border: 1px double #33dacd;
+  color: #fff
+}
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  background: #00a699;
+  border: 1px double #00a699;
+  color: #fff
+}
+.CalendarDay__hovered_span,
+.CalendarDay__hovered_span:hover {
+  background: #b2f1ec;
+  border: 1px double #80e8e0;
+  color: #007a87
+}
+.CalendarDay__hovered_span:active {
+  background: #80e8e0;
+  border: 1px double #80e8e0;
+  color: #007a87
+}
+.CalendarDay__blocked_calendar,
+.CalendarDay__blocked_calendar:active,
+.CalendarDay__blocked_calendar:hover {
+  background: #cacccd;
+  border: 1px solid #cacccd;
+  color: #82888a
+}
+.CalendarDay__blocked_out_of_range,
+.CalendarDay__blocked_out_of_range:active,
+.CalendarDay__blocked_out_of_range:hover {
+  background: #fff;
+  border: 1px solid #e4e7e7;
+  color: #cacccd
+}
+.CalendarDay__hovered_start_first_possible_end {
+  background: #eceeee;
+  border: 1px double #eceeee
+}
+.CalendarDay__hovered_start_blocked_min_nights {
+  background: #eceeee;
+  border: 1px double #e4e7e7
+}
+.CalendarMonth {
+  background: #fff;
+  text-align: center;
+  vertical-align: top;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+.CalendarMonth_table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+.CalendarMonth_verticalSpacing {
+  border-collapse: separate
+}
+.CalendarMonth_caption {
+  color: #484848;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 37px;
+  caption-side: initial
+}
+.CalendarMonth_caption__verticalScrollable {
+  padding-top: 12px;
+  padding-bottom: 7px
+}
+.CalendarMonthGrid {
+  background: #fff;
+  text-align: left;
+  z-index: 0
+}
+.CalendarMonthGrid__animating {
+  z-index: 1
+}
+.CalendarMonthGrid__horizontal {
+  position: absolute;
+  left: 9px
+}
+.CalendarMonthGrid__vertical {
+  margin: 0 auto
+}
+.CalendarMonthGrid__vertical_scrollable {
+  margin: 0 auto;
+  overflow-y: scroll
+}
+.CalendarMonthGrid_month__horizontal {
+  display: inline-block;
+  vertical-align: top;
+  min-height: 100%
+}
+.CalendarMonthGrid_month__hideForAnimation {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none
+}
+.CalendarMonthGrid_month__hidden {
+  visibility: hidden
+}
+.DayPickerNavigation {
+  position: relative;
+  z-index: 2
+}
+.DayPickerNavigation__horizontal {
+  height: 0
+}
+.DayPickerNavigation__verticalDefault {
+  position: absolute;
+  width: 100%;
+  height: 52px;
+  bottom: 0;
+  left: 0
+}
+.DayPickerNavigation__verticalScrollableDefault {
+  position: relative
+}
+.DayPickerNavigation_button {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  padding: 0;
+  margin: 0
+}
+.DayPickerNavigation_button__default {
+  border: 1px solid #e4e7e7;
+  background-color: #fff;
+  color: #757575
+}
+.DayPickerNavigation_button__default:focus,
+.DayPickerNavigation_button__default:hover {
+  border: 1px solid #c4c4c4
+}
+.DayPickerNavigation_button__default:active {
+  background: #f2f2f2
+}
+.DayPickerNavigation_button__disabled {
+  cursor: default;
+  border: 1px solid #f2f2f2
+}
+.DayPickerNavigation_button__disabled:focus,
+.DayPickerNavigation_button__disabled:hover {
+  border: 1px solid #f2f2f2
+}
+.DayPickerNavigation_button__disabled:active {
+  background: 0 0
+}
+.DayPickerNavigation_button__horizontalDefault {
+  position: absolute;
+  top: 18px;
+  line-height: .78;
+  border-radius: 3px;
+  padding: 6px 9px
+}
+.DayPickerNavigation_leftButton__horizontalDefault {
+  left: 22px
+}
+.DayPickerNavigation_rightButton__horizontalDefault {
+  right: 22px
+}
+.DayPickerNavigation_button__verticalDefault {
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  width: 50%
+}
+.DayPickerNavigation_nextButton__verticalDefault {
+  border-left: 0
+}
+.DayPickerNavigation_nextButton__verticalScrollableDefault {
+  width: 100%
+}
+.DayPickerNavigation_svg__horizontal {
+  height: 19px;
+  width: 19px;
+  fill: #82888a;
+  display: block
+}
+.DayPickerNavigation_svg__vertical {
+  height: 42px;
+  width: 42px;
+  fill: #484848
+}
+.DayPickerNavigation_svg__disabled {
+  fill: #f2f2f2
+}
+.DayPicker {
+  background: #fff;
+  position: relative;
+  text-align: left
+}
+.DayPicker__horizontal {
+  background: #fff
+}
+.DayPicker__verticalScrollable {
+  height: 100%
+}
+.DayPicker__hidden {
+  visibility: hidden
+}
+.DayPicker__withBorder {
+  box-shadow: 0 2px 6px rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.07);
+  border-radius: 3px
+}
+.DayPicker_portal__horizontal {
+  box-shadow: none;
+  position: absolute;
+  left: 50%;
+  top: 50%
+}
+.DayPicker_portal__vertical {
+  position: initial
+}
+.DayPicker_focusRegion {
+  outline: 0
+}
+.DayPicker_calendarInfo__horizontal,
+.DayPicker_wrapper__horizontal {
+  display: inline-block;
+  vertical-align: top
+}
+.DayPicker_weekHeaders {
+  position: relative
+}
+.DayPicker_weekHeaders__horizontal {
+  margin-left: 9px
+}
+.DayPicker_weekHeader {
+  color: #757575;
+  position: absolute;
+  top: 62px;
+  z-index: 2;
+  text-align: left
+}
+.DayPicker_weekHeader__vertical {
+  left: 50%
+}
+.DayPicker_weekHeader__verticalScrollable {
+  top: 0;
+  display: table-row;
+  border-bottom: 1px solid #dbdbdb;
+  background: #fff;
+  margin-left: 0;
+  left: 0;
+  width: 100%;
+  text-align: center
+}
+.DayPicker_weekHeader_ul {
+  list-style: none;
+  margin: 1px 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 14px
+}
+.DayPicker_weekHeader_li {
+  display: inline-block;
+  text-align: center
+}
+.DayPicker_transitionContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px
+}
+.DayPicker_transitionContainer__horizontal {
+  -webkit-transition: height .2s ease-in-out;
+  -moz-transition: height .2s ease-in-out;
+  transition: height .2s ease-in-out
+}
+.DayPicker_transitionContainer__vertical {
+  width: 100%
+}
+.DayPicker_transitionContainer__verticalScrollable {
+  padding-top: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow-y: scroll
+}
+.DateInput {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  vertical-align: middle
+}
+.DateInput__small {
+  width: 97px
+}
+.DateInput__block {
+  width: 100%
+}
+.DateInput__disabled {
+  background: #f2f2f2;
+  color: #dbdbdb
+}
+.DateInput_input {
+  font-weight: 200;
+  font-size: 19px;
+  line-height: 24px;
+  color: #484848;
+  background-color: #fff;
+  width: 100%;
+  padding: 11px 11px 9px;
+  border: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid transparent;
+  border-left: 0;
+  border-radius: 0
+}
+.DateInput_input__small {
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: .2px;
+  padding: 7px 7px 5px
+}
+.DateInput_input__regular {
+  font-weight: auto
+}
+.DateInput_input__readOnly {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+.DateInput_input__focused {
+  outline: 0;
+  background: #fff;
+  border: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #008489;
+  border-left: 0
+}
+.DateInput_input__disabled {
+  background: #f2f2f2;
+  font-style: italic
+}
+.DateInput_screenReaderMessage {
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px
+}
+.DateInput_fang {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  left: 22px;
+  z-index: 2
+}
+.DateInput_fangShape {
+  fill: #fff
+}
+.DateInput_fangStroke {
+  stroke: #dbdbdb;
+  fill: transparent
+}
+.DateRangePickerInput {
+  background-color: #fff;
+  display: inline-block
+}
+.DateRangePickerInput__disabled {
+  background: #f2f2f2
+}
+.DateRangePickerInput__withBorder {
+  border-radius: 2px;
+  border: 1px solid #dbdbdb
+}
+.DateRangePickerInput__rtl {
+  direction: rtl
+}
+.DateRangePickerInput__block {
+  display: block
+}
+.DateRangePickerInput__showClearDates {
+  padding-right: 30px
+}
+.DateRangePickerInput_arrow {
+  display: inline-block;
+  vertical-align: middle;
+  color: #484848
+}
+.DateRangePickerInput_arrow_svg {
+  vertical-align: middle;
+  fill: #484848;
+  height: 24px;
+  width: 24px
+}
+.DateRangePickerInput_clearDates {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px 0 5px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.DateRangePickerInput_clearDates__small {
+  padding: 6px
+}
+.DateRangePickerInput_clearDates_default:focus,
+.DateRangePickerInput_clearDates_default:hover {
+  background: #dbdbdb;
+  border-radius: 50%
+}
+.DateRangePickerInput_clearDates__hide {
+  visibility: hidden
+}
+.DateRangePickerInput_clearDates_svg {
+  fill: #82888a;
+  height: 12px;
+  width: 15px;
+  vertical-align: middle
+}
+.DateRangePickerInput_clearDates_svg__small {
+  height: 9px
+}
+.DateRangePickerInput_calendarIcon {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+  margin: 0 5px 0 10px
+}
+.DateRangePickerInput_calendarIcon_svg {
+  fill: #82888a;
+  height: 15px;
+  width: 14px;
+  vertical-align: middle
+}
+.DateRangePicker {
+  position: relative;
+  display: inline-block
+}
+.DateRangePicker__block {
+  display: block
+}
+.DateRangePicker_picker {
+  z-index: 1;
+  background-color: #fff;
+  position: absolute
+}
+.DateRangePicker_picker__rtl {
+  direction: rtl
+}
+.DateRangePicker_picker__directionLeft {
+  left: 0
+}
+.DateRangePicker_picker__directionRight {
+  right: 0
+}
+.DateRangePicker_picker__portal {
+  background-color: rgba(0,0,0,.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%
+}
+.DateRangePicker_picker__fullScreenPortal {
+  background-color: #fff
+}
+.DateRangePicker_closeButton {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  z-index: 2
+}
+.DateRangePicker_closeButton:focus,
+.DateRangePicker_closeButton:hover {
+  color: darken(#cacccd,10%);
+  text-decoration: none
+}
+.DateRangePicker_closeButton_svg {
+  height: 15px;
+  width: 15px;
+  fill: #cacccd
+}</style><style type="text/css">.DateInput_input {
+    box-sizing: border-box;
+}</style>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Dash User Guide and Documentation. Dash is a Python framework for building analytical web apps in Python.">
+        <title>Dash User Guide and Documentation - Dash by Plotly</title>
+        <link href="https://dash.plot.ly/_favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/base.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/daq.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/dashbio.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/dosis.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/local-css-example.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/open-sans.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/override.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/pdf-docs.css">
+<link rel="stylesheet" href="./Dash User Guide and Documentation - Dash by Plotly_files/tabs-styled-with-classes.css">
+        <!-- Google Tag Manager Tag -->
+        <script type="text/javascript" src="./Dash User Guide and Documentation - Dash by Plotly_files/pd.js.下载"></script><script async="" src="./Dash User Guide and Documentation - Dash by Plotly_files/analytics.js.下载"></script><script type="text/javascript" async="" src="./Dash User Guide and Documentation - Dash by Plotly_files/analytics.js.下载"></script><script async="" src="./Dash User Guide and Documentation - Dash by Plotly_files/gtm.js.下载"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N6T2RXG');</script>
+    <style data-styled-components="">
+/* sc-component-id: sc-bdVaJa */
+
+/* sc-component-id: sc-bwzfXH */
+
+/* sc-component-id: sc-htpNat */
+
+/* sc-component-id: sc-bxivhb */
+
+/* sc-component-id: sc-ifAKCX */
+
+/* sc-component-id: sc-EHOje */
+
+/* sc-component-id: sc-bZQynM */
+
+/* sc-component-id: sc-gzVnrw */
+
+/* sc-component-id: sc-htoDjs */
+
+/* sc-component-id: sc-dnqmqq */
+
+/* sc-component-id: sc-iwsKbI */
+
+/* sc-component-id: sc-gZMcBi */
+
+/* sc-component-id: sc-gqjmRU */
+
+/* sc-component-id: sc-VigVT */
+
+/* sc-component-id: sc-jTzLTM */
+
+/* sc-component-id: sc-fjdhpX */
+
+/* sc-component-id: sc-jzJRlG */
+
+/* sc-component-id: sc-cSHVUG */
+
+/* sc-component-id: sc-kAzzGY */
+
+/* sc-component-id: sc-chPdSV */
+
+/* sc-component-id: sc-kgoBCf */
+
+/* sc-component-id: sc-kGXeez */
+
+/* sc-component-id: sc-kpOJdX */
+
+/* sc-component-id: sc-dxgOiQ */
+
+/* sc-component-id: sc-ckVGcZ */
+
+/* sc-component-id: sc-jKJlTe */
+
+/* sc-component-id: sc-eNQAEJ */
+
+/* sc-component-id: sc-hMqMXs */
+
+/* sc-component-id: sc-kEYyzF */
+
+/* sc-component-id: sc-kkGfuU */
+
+/* sc-component-id: sc-iAyFgw */
+
+/* sc-component-id: sc-hSdWYo */
+
+/* sc-component-id: sc-eHgmQL */
+
+/* sc-component-id: sc-cvbbAY */
+
+/* sc-component-id: sc-jWBwVP */
+
+/* sc-component-id: sc-brqgnP */
+
+/* sc-component-id: sc-cMljjf */
+
+/* sc-component-id: sc-jAaTju */
+
+/* sc-component-id: sc-jDwBTQ */
+
+/* sc-component-id: sc-gPEVay */
+</style><style data-styled-components="">
+/* sc-component-id: sc-iRbamj */
+</style><style id="plotly.js-style-global"></style><style type="text/css">div.circos-tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 5px 10px;
+  background: #111111;
+  color: white;
+  border: 0px;
+  pointer-events: none;
+  z-index: 1000;
+}
+</style><style data-emotion=""></style><style type="text/css">/**
+ * React Select
+ * ============
+ * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
+ * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
+ * MIT License: https://github.com/JedWatson/react-select
+*/
+.Select {
+  position: relative;
+}
+.Select input::-webkit-contacts-auto-fill-button,
+.Select input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+.Select input::-ms-clear {
+  display: none !important;
+}
+.Select input::-ms-reveal {
+  display: none !important;
+}
+.Select,
+.Select div,
+.Select input,
+.Select span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.Select.is-disabled .Select-arrow-zone {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.35;
+}
+.Select.is-disabled > .Select-control {
+  background-color: #f9f9f9;
+}
+.Select.is-disabled > .Select-control:hover {
+  box-shadow: none;
+}
+.Select.is-open > .Select-control {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #fff;
+  border-color: #b3b3b3 #ccc #d9d9d9;
+}
+.Select.is-open > .Select-control .Select-arrow {
+  top: -2px;
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
+}
+.Select.is-searchable.is-open > .Select-control {
+  cursor: text;
+}
+.Select.is-searchable.is-focused:not(.is-open) > .Select-control {
+  cursor: text;
+}
+.Select.is-focused > .Select-control {
+  background: #fff;
+}
+.Select.is-focused:not(.is-open) > .Select-control {
+  border-color: #007eff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+  background: #fff;
+}
+.Select.has-value.is-clearable.Select--single > .Select-control .Select-value {
+  padding-right: 42px;
+}
+.Select.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  color: #333;
+}
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label {
+  cursor: pointer;
+  text-decoration: none;
+}
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+  color: #007eff;
+  outline: none;
+  text-decoration: underline;
+}
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+  background: #fff;
+}
+.Select.has-value.is-pseudo-focused .Select-input {
+  opacity: 0;
+}
+.Select.is-open .Select-arrow,
+.Select .Select-arrow-zone:hover > .Select-arrow {
+  border-top-color: #666;
+}
+.Select.Select--rtl {
+  direction: rtl;
+  text-align: right;
+}
+.Select-control {
+  background-color: #fff;
+  border-color: #d9d9d9 #ccc #b3b3b3;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: default;
+  display: table;
+  border-spacing: 0;
+  border-collapse: separate;
+  height: 36px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.Select-control:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.Select-control .Select-input:focus {
+  outline: none;
+  background: #fff;
+}
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+  bottom: 0;
+  color: #aaa;
+  left: 0;
+  line-height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.Select-input {
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.Select-input > input {
+  width: 100%;
+  background: none transparent;
+  border: 0 none;
+  box-shadow: none;
+  cursor: default;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  outline: none;
+  line-height: 17px;
+  /* For IE 8 compatibility */
+  padding: 8px 0 12px;
+  /* For IE 8 compatibility */
+  -webkit-appearance: none;
+}
+.is-focused .Select-input > input {
+  cursor: text;
+}
+.has-value.is-pseudo-focused .Select-input {
+  opacity: 0;
+}
+.Select-control:not(.is-searchable) > .Select-input {
+  outline: none;
+}
+.Select-loading-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+}
+.Select-loading {
+  -webkit-animation: Select-animation-spin 400ms infinite linear;
+  -o-animation: Select-animation-spin 400ms infinite linear;
+  animation: Select-animation-spin 400ms infinite linear;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-right-color: #333;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.Select-clear-zone {
+  -webkit-animation: Select-animation-fadeIn 200ms;
+  -o-animation: Select-animation-fadeIn 200ms;
+  animation: Select-animation-fadeIn 200ms;
+  color: #999;
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 17px;
+}
+.Select-clear-zone:hover {
+  color: #D0021B;
+}
+.Select-clear {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+}
+.Select--multi .Select-clear-zone {
+  width: 17px;
+}
+.Select-arrow-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px;
+  padding-right: 5px;
+}
+.Select--rtl .Select-arrow-zone {
+  padding-right: 0;
+  padding-left: 5px;
+}
+.Select-arrow {
+  border-color: #999 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 2.5px;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  position: relative;
+}
+.Select-control > *:last-child {
+  padding-right: 5px;
+}
+.Select--multi .Select-multi-value-wrapper {
+  display: inline-block;
+}
+.Select .Select-aria-only {
+  position: absolute;
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  float: left;
+}
+@-webkit-keyframes Select-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes Select-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Select-menu-outer {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-color: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+}
+.Select-menu {
+  max-height: 198px;
+  overflow-y: auto;
+}
+.Select-option {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #666666;
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+.Select-option:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.Select-option.is-selected {
+  background-color: #f5faff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.04);
+  color: #333;
+}
+.Select-option.is-focused {
+  background-color: #ebf5ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.08);
+  color: #333;
+}
+.Select-option.is-disabled {
+  color: #cccccc;
+  cursor: default;
+}
+.Select-noresults {
+  box-sizing: border-box;
+  color: #999999;
+  cursor: default;
+  display: block;
+  padding: 8px 10px;
+}
+.Select--multi .Select-input {
+  vertical-align: middle;
+  margin-left: 10px;
+  padding: 0;
+}
+.Select--multi.Select--rtl .Select-input {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.Select--multi.has-value .Select-input {
+  margin-left: 5px;
+}
+.Select--multi .Select-value {
+  background-color: #ebf5ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.08);
+  border-radius: 2px;
+  border: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border: 1px solid rgba(0, 126, 255, 0.24);
+  color: #007eff;
+  display: inline-block;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-left: 5px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.Select--multi .Select-value-icon,
+.Select--multi .Select-value-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.Select--multi .Select-value-label {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: default;
+  padding: 2px 5px;
+}
+.Select--multi a.Select-value-label {
+  color: #007eff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.Select--multi a.Select-value-label:hover {
+  text-decoration: underline;
+}
+.Select--multi .Select-value-icon {
+  cursor: pointer;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-right: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border-right: 1px solid rgba(0, 126, 255, 0.24);
+  padding: 1px 5px 3px;
+}
+.Select--multi .Select-value-icon:hover,
+.Select--multi .Select-value-icon:focus {
+  background-color: #d8eafd;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 113, 230, 0.08);
+  color: #0071e6;
+}
+.Select--multi .Select-value-icon:active {
+  background-color: #c2e0ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.24);
+}
+.Select--multi.Select--rtl .Select-value {
+  margin-left: 0;
+  margin-right: 5px;
+}
+.Select--multi.Select--rtl .Select-value-icon {
+  border-right: none;
+  border-left: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border-left: 1px solid rgba(0, 126, 255, 0.24);
+}
+.Select--multi.is-disabled .Select-value {
+  background-color: #fcfcfc;
+  border: 1px solid #e3e3e3;
+  color: #333;
+}
+.Select--multi.is-disabled .Select-value-icon {
+  cursor: not-allowed;
+  border-right: 1px solid #e3e3e3;
+}
+.Select--multi.is-disabled .Select-value-icon:hover,
+.Select--multi.is-disabled .Select-value-icon:focus,
+.Select--multi.is-disabled .Select-value-icon:active {
+  background-color: #fcfcfc;
+}
+@keyframes Select-animation-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes Select-animation-spin {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+</style><style type="text/css">.dash-spreadsheet.dash-freeze-left,
+.dash-spreadsheet.dash-freeze-top {
+  width: auto;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+}
+.dash-spreadsheet.dash-freeze-left {
+  max-width: 500px;
+}
+.dash-spreadsheet.dash-freeze-top,
+.dash-spreadsheet.dash-virtualized {
+  max-height: 500px;
+}
+.dash-tooltip {
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 500;
+}
+.dash-tooltip .dash-table-tooltip {
+  position: relative;
+  background-color: #f6f6f6;
+  max-width: 300px;
+  min-width: 300px;
+  padding: 2px 10px;
+}
+.dash-tooltip[data-attr-anchor='top'] {
+  margin-top: 10px;
+}
+.dash-tooltip[data-attr-anchor='top']:after,
+.dash-tooltip[data-attr-anchor='top']:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.dash-tooltip[data-attr-anchor='top']:after {
+  border-color: transparent;
+  border-bottom-color: #f6f6f6;
+  border-width: 8px;
+  margin-left: -8px;
+}
+.dash-tooltip[data-attr-anchor='top']:before {
+  border-color: transparent;
+  border-bottom-color: #e4e4e4;
+  border-width: 9px;
+  margin-left: -9px;
+}
+.dash-tooltip[data-attr-anchor='bottom'] {
+  margin-bottom: 10px;
+}
+.dash-tooltip[data-attr-anchor='bottom']:after,
+.dash-tooltip[data-attr-anchor='bottom']:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.dash-tooltip[data-attr-anchor='bottom']:after {
+  border-color: transparent;
+  border-top-color: #f6f6f6;
+  border-width: 8px;
+  margin-left: -8px;
+}
+.dash-tooltip[data-attr-anchor='bottom']:before {
+  border-color: transparent;
+  border-top-color: #e4e4e4;
+  border-width: 9px;
+  margin-left: -9px;
+}
+.dash-spreadsheet-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  /* focus happens after copying to clipboard */
+}
+.dash-spreadsheet-container div,
+.dash-spreadsheet-container dl,
+.dash-spreadsheet-container dt,
+.dash-spreadsheet-container dd,
+.dash-spreadsheet-container ul,
+.dash-spreadsheet-container ol,
+.dash-spreadsheet-container li,
+.dash-spreadsheet-container h1,
+.dash-spreadsheet-container h2,
+.dash-spreadsheet-container h3,
+.dash-spreadsheet-container h4,
+.dash-spreadsheet-container h5,
+.dash-spreadsheet-container h6,
+.dash-spreadsheet-container pre,
+.dash-spreadsheet-container code,
+.dash-spreadsheet-container form,
+.dash-spreadsheet-container fieldset,
+.dash-spreadsheet-container legend,
+.dash-spreadsheet-container input,
+.dash-spreadsheet-container textarea,
+.dash-spreadsheet-container p,
+.dash-spreadsheet-container blockquote,
+.dash-spreadsheet-container th,
+.dash-spreadsheet-container td {
+  margin: 0;
+  padding: 0;
+}
+.dash-spreadsheet-container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.dash-spreadsheet-container fieldset,
+.dash-spreadsheet-container img {
+  border: 0;
+}
+.dash-spreadsheet-container address,
+.dash-spreadsheet-container caption,
+.dash-spreadsheet-container cite,
+.dash-spreadsheet-container code,
+.dash-spreadsheet-container dfn,
+.dash-spreadsheet-container em,
+.dash-spreadsheet-container strong,
+.dash-spreadsheet-container th,
+.dash-spreadsheet-container var {
+  font-style: normal;
+  font-weight: normal;
+}
+.dash-spreadsheet-container ol,
+.dash-spreadsheet-container ul {
+  list-style: none;
+}
+.dash-spreadsheet-container caption,
+.dash-spreadsheet-container th {
+  text-align: left;
+}
+.dash-spreadsheet-container h1,
+.dash-spreadsheet-container h2,
+.dash-spreadsheet-container h3,
+.dash-spreadsheet-container h4,
+.dash-spreadsheet-container h5,
+.dash-spreadsheet-container h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+.dash-spreadsheet-container q:before,
+.dash-spreadsheet-container q:after {
+  content: '';
+}
+.dash-spreadsheet-container abbr,
+.dash-spreadsheet-container acronym {
+  border: 0;
+  font-variant: normal;
+}
+.dash-spreadsheet-container sup {
+  vertical-align: text-top;
+}
+.dash-spreadsheet-container sub {
+  vertical-align: text-bottom;
+}
+.dash-spreadsheet-container input,
+.dash-spreadsheet-container textarea,
+.dash-spreadsheet-container select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%;
+}
+.dash-spreadsheet-container legend {
+  color: #000;
+}
+.dash-spreadsheet-container #yui3-css-stamp.cssreset {
+  display: none;
+}
+.dash-spreadsheet-container input[type="button"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.dash-spreadsheet-container *:focus {
+  outline: none;
+}
+.dash-spreadsheet-container table {
+  font-size: inherit;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner *,
+.dash-spreadsheet-container .dash-spreadsheet-inner *:after,
+.dash-spreadsheet-container .dash-spreadsheet-inner *:before {
+  box-sizing: inherit;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .Select {
+  overflow: hidden;
+  position: static;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .Select,
+.dash-spreadsheet-container .dash-spreadsheet-inner .Select-control {
+  background-color: inherit;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .Select-value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -2px;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .marker-row tr {
+  visibility: hidden !important;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .marker-row td,
+.dash-spreadsheet-container .dash-spreadsheet-inner .marker-row th {
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .dash-filter input::placeholder {
+  color: inherit;
+  font-size: 0.8em;
+  padding-right: 5px;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .dash-filter + .dash-filter:not(:hover):not(:focus-within) input::placeholder {
+  color: transparent;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .dash-filter.invalid {
+  background-color: pink;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner:not(.dash-empty-11) .row-0 tr:last-of-type td,
+.dash-spreadsheet-container .dash-spreadsheet-inner:not(.dash-empty-11) .row-0 tr:last-of-type th {
+  border-bottom: none !important;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner:not(.dash-empty-01) .cell-0-0 tr td:last-of-type,
+.dash-spreadsheet-container .dash-spreadsheet-inner:not(.dash-empty-01) .cell-1-0 tr td:last-of-type,
+.dash-spreadsheet-container .dash-spreadsheet-inner:not(.dash-empty-01) .cell-0-0 tr th:last-of-type,
+.dash-spreadsheet-container .dash-spreadsheet-inner:not(.dash-empty-01) .cell-1-0 tr th:last-of-type {
+  border-right: none !important;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-left,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-top,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-virtualized {
+  overflow: hidden !important;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-left .row-0,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-top .row-0,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-virtualized .row-0 {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-left .row-1,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-top .row-1,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-virtualized .row-1 {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-left .cell-0-0,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-top .cell-0-0,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-virtualized .cell-0-0,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-left .cell-1-0,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-top .cell-1-0,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-virtualized .cell-1-0 {
+  flex: 0 0 auto;
+  left: 0;
+  position: sticky;
+  z-index: 400;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-left .cell-0-1,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-top .cell-0-1,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-virtualized .cell-0-1 {
+  z-index: 300;
+  flex: 0 0 auto;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-left .cell-1-1,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-freeze-top .cell-1-1,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-virtualized .cell-1-1 {
+  flex: 0 0 auto;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-grow .cell-0-1,
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-grow .cell-1-1 {
+  flex: 1 0 auto;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner.dash-grow table {
+  width: 100%;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .selected-row td,
+.dash-spreadsheet-container .dash-spreadsheet-inner .selected-row th {
+  background-color: var(--selected-row);
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner tr {
+  background-color: white;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td {
+  background-color: inherit;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td.cell--selected {
+  background-color: var(--selected-background);
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td.focused {
+  margin: -1px;
+  z-index: 200;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td .dash-cell-value-container {
+  width: 100%;
+  height: 100%;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td .dash-input-cell-value-container {
+  position: relative;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td .dash-cell-value {
+  height: 100%;
+  width: 100%;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td input.dash-cell-value {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td input.dash-cell-value.unfocused::selection {
+  background-color: transparent;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td input.dash-cell-value.unfocused {
+  caret-color: transparent;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td div.dash-cell-value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td .cell-value-shadow {
+  margin: auto 0;
+  opacity: 0;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td .input-cell-value-shadow {
+  display: inline-block;
+  height: initial;
+  width: initial;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td .dropdown-cell-value-shadow {
+  display: block;
+  height: 0px;
+  padding: 0 42px 0 10px;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner th.dash-filter {
+  position: relative;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner th.dash-filter input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td,
+.dash-spreadsheet-container .dash-spreadsheet-inner th {
+  padding: 2px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  height: 30px;
+  text-align: right;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner th .column-header--edit,
+.dash-spreadsheet-container .dash-spreadsheet-inner th .column-header--delete,
+.dash-spreadsheet-container .dash-spreadsheet-inner th .sort {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  cursor: pointer;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner textarea {
+  white-space: pre;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner table {
+  border-collapse: collapse;
+  font-family: monospace;
+  --accent: hotpink;
+  --border: lightgrey;
+  --text-color: #3c3c3c;
+  --hover: #fdfdfd;
+  --background-color-ellipses: #fdfdfd;
+  --faded-text: #fafafa;
+  --faded-text-header: #b4b4b4;
+  --selected-background: rgba(255, 65, 54, 0.2);
+  --faded-dropdown: #f0f0f0;
+  --selected-row: #fff0ff;
+  --muted: #c8c8c8;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner table:focus {
+  outline: none;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner thead {
+  display: table-row-group;
+}
+.dash-spreadsheet-container .elip {
+  text-align: center;
+  width: 100%;
+  background-color: var(--background-color-ellipses);
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner td.dropdown {
+  /*
+        * To view the dropdown's contents, we need
+        * overflow-y: visible.
+        * Unfortunately, overflow-x: hidden and overflow-y: visible
+        * can't both be set at the same time.
+        * So, we have to make both overflow-x: visible and overflow-y: visble
+        *
+        * See https://stackoverflow.com/questions/6421966/
+        *
+        * There might be another solution with parent divs, but I haven't
+        * tried it.
+        */
+  overflow-x: visible;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner :not(.cell--selected) tr:hover,
+.dash-spreadsheet-container tr:hover input :not(.cell--selected) {
+  background-color: var(--hover);
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner th {
+  background-color: #fafafa;
+}
+.dash-spreadsheet-container .sort {
+  cursor: pointer;
+  float: left;
+  color: var(--faded-text-header);
+  font-size: 20px;
+}
+.dash-spreadsheet-container th:hover .sort {
+  color: var(--accent);
+}
+.dash-spreadsheet-container .sort:hover {
+  text-decoration: underline;
+}
+.dash-spreadsheet-container .expanded-row--empty-cell {
+  background-color: transparent;
+}
+.dash-spreadsheet-container .expanded-row {
+  text-align: center;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner input:not([type=radio]):not([type=checkbox]) {
+  padding: 0px;
+  margin: 0px;
+  height: calc(100% - 1px);
+  line-height: 30px;
+  border: none;
+  font-family: inherit;
+  text-align: right;
+  box-sizing: border-box;
+  color: var(--text-color);
+  background-color: transparent;
+  /* so as to not overlay the box shadow */
+  /* browser's default text-shadow is `$color 0px 0px 0px;`
+        * for `input`, which makes it look a little bit heavier than dropdowns
+        * or bare `td`
+        */
+  text-shadow: none;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner input.unfocused {
+  color: transparent;
+  text-shadow: 0 0 0 var(--text-color);
+  cursor: default;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner input.unfocused:focus {
+  outline: none;
+}
+.dash-spreadsheet-container .toggle-row {
+  border: none;
+  box-shadow: none;
+  width: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: var(--faded-text);
+}
+.dash-spreadsheet-container .toggle-row--expanded {
+  color: var(--accent);
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner tr:hover .toggle-row {
+  color: var(--accent);
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .dash-delete-cell,
+.dash-spreadsheet-container .dash-spreadsheet-inner .dash-delete-header {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  font-size: 1.3rem;
+  text-align: center;
+  cursor: pointer;
+  color: var(--muted);
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .dash-delete-cell:hover,
+.dash-spreadsheet-container .dash-spreadsheet-inner .dash-delete-header:hover {
+  color: var(--accent);
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .column-header--edit {
+  float: left;
+  opacity: 0.1;
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: pointer;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner th:hover .column-header--edit {
+  color: var(--accent);
+  opacity: 1;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner .column-header--delete {
+  float: left;
+  opacity: 0.1;
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: pointer;
+}
+.dash-spreadsheet-container .dash-spreadsheet-inner th:hover .column-header--delete {
+  color: var(--accent);
+  opacity: 1;
+}
+</style><style type="text/css">.dash-spreadsheet .Select,
+.dash-spreadsheet .Select-control {
+    border: none;
+    cursor: pointer;
+    height: 30px;  /* matches the td height and line-height */
+    border: none;
+}
+
+.dash-spreadsheet .Select-placeholder,
+.dash-spreadsheet .Select--single > .Select-control .Select-value {
+    height: 100%;
+    line-height: inherit;
+}
+
+.dash-spreadsheet .Select.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.dash-spreadsheet .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+    color: var(--text-color);
+}
+
+.dash-spreadsheet .Select:hover,
+.dash-spreadsheet .Select-control:hover {
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.dash-spreadsheet .Select-menu-outer {
+    z-index: 100;
+}
+
+.dash-spreadsheet .Select-arrow {
+    border-top-color: var(--faded-dropdown);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.dash-spreadsheet .Select-control:hover .Select-arrow {
+    border-top-color: var(--accent);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.dash-spreadsheet .is-open > .Select-control .Select-arrow {
+    border-bottom-color: var(--background-color-8-react-select);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+.dash-spreadsheet .Select--multi .Select-value,
+.dash-spreadsheet .Select--multi a.Select-value-label {
+    color: var(--color-8-react-select);
+}
+
+.dash-spreadsheet .Select {
+    border-radius: 0;
+}
+
+.dash-spreadsheet .Select.is-disabled > .Select-control {
+    border: none;
+}
+
+.dash-spreadsheet .Select--multi .Select-value-icon:hover,
+.dash-spreadsheet .Select--multi .Select-value-icon:focus {
+    font-weight: bold;
+}
+
+.dash-spreadsheet .Select.is-disabled .Select-control {
+    cursor: not-allowed;
+}
+
+.dash-spreadsheet .Select-menu-outer {
+    background-color: white;
+    border: none;
+    border-bottom: thin var(--border) solid;
+    border-radius: 0;
+    border-top: none;
+}
+
+.dash-spreadsheet .Select-option {
+    background-color: inherit;
+    color: var(--accent);
+}
+
+.dash-spreadsheet .Select-option:hover {
+    font-weight: bold;
+    color: var(--accent);
+    background-color: var(--hover);
+}
+
+.dash-spreadsheet .Select.is-focused:not(.is-open) > .Select-control {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #fff;
+}
+
+.dash-spreadsheet .Select-option.is-focused {
+    background-color: white;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.dash-spreadsheet .Select-clear {
+    color: transparent;
+}
+.dash-spreadsheet .Select:hover .Select-clear {
+    color: var(--accent);
+}
+
+.dash-spreadsheet .Select-control {
+    padding-left: 2px;
+}
+
+.dash-spreadsheet .cell--selected .Select-control {
+    background-color: var(--selected-background);
+    border-radius: 0;
+}
+</style><script type="text/javascript" src="./Dash User Guide and Documentation - Dash by Plotly_files/analytics"></script><script type="text/javascript" src="./Dash User Guide and Documentation - Dash by Plotly_files/analytics(1)"></script></head>
+    <body>
+        <!-- Google Tag Manager Tag -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6T2RXG"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        
+<div id="react-entry-point"><div class="_dash-undo-redo" data-radium="true" style="position: fixed; bottom: 30px; left: 30px; font-size: 20px; text-align: center; z-index: 9999; background-color: rgba(255, 255, 255, 0.9);"><div data-radium="true" style="position: relative;"><span data-radium="true" style="color: rgb(0, 116, 217); cursor: pointer; display: inline-block; opacity: 0.2;"><div data-radium="true" style="transform: rotate(270deg); font-size: 20px;">↺</div><div data-radium="true" style="font-size: 15px;">undo</div></span></div></div><div><div class="header"><div class="container-width" style="height: 100%;"><a href="https://plot.ly/products/dash"><img class="logo" src="./Dash User Guide and Documentation - Dash by Plotly_files/logo.png"></a><div class="links"><a class="link" href="https://plot.ly/dash/pricing">pricing</a><a class="link active" href="https://dash.plot.ly/">user guide</a><a class="link" href="https://plot.ly/">plotly</a><a class="link" href="https://dash.plot.ly/search"><i class="fa fa-search"></i></a></div></div></div><div class="background"><div id="wait-for-layout"></div><div class="container-width"><div class="content-container"><div class="content" id="chapter"><div><div><div><h1>Adding CSS &amp; JS and Overriding the Page-Load Template</h1><div><p>Dash applications are rendered in the web browser with CSS and JavaScript.
+On page load, Dash serves a small HTML template that includes references to
+the CSS and JavaScript that are required to render the application.
+This chapter covers everything that you need to know about configuring
+this HTML file and about including external CSS and JavaScript in Dash
+applications.</p><p><strong>Table of Contents</strong></p><ul><li>Adding Your Own CSS and JavaScript to Dash Apps</li><li>Embedding Images in Your Dash Apps</li><li>Adding External CSS and JavaScript</li><li>Customizing Dash's HTML Index Template</li><li>Adding Meta Tags</li><li>Serving Dash's Component Libraries Locally or from a CDN</li><li>Sample Dash CSS Stylesheet</li></ul><hr><h2>Adding Your Own CSS and JavaScript to Dash Apps</h2><p><strong>New in dash 0.22.0</strong></p><p>Including custom CSS or JavaScript in your Dash apps is simple.
+Just create a folder named <code>assets</code> in the root of your app directory
+and include your CSS and JavaScript
+files in that folder. Dash will automatically serve all of the files that
+are included in this folder. By default the url to request the assets will
+be <code>/assets</code> but you can customize this with the <code>assets_url_path</code> argument
+to <code>dash.Dash</code>.</p><p><strong>Important: For these examples, you need to include <code>__name__</code> in your Dash constructor.</strong></p><p>That is, <code>app = dash.Dash(__name__)</code> instead of <code>app = dash.Dash()</code>. <a href="https://community.plot.ly/t/dash-app-does-not-load-assets-and-app-index-string/12178/10?u=chriddyp">Here's why</a>.</p><h3>Example: Including Local CSS and JavaScript</h3><p>We'll create several files: <code>app.py</code>, a folder named <code>assets</code>, and
+three files in that folder:</p><pre><code>- app.py
+- assets/
+    |-- typography.css
+    |-- header.css
+    |-- custom-script.js</code></pre><p>&nbsp;</p><p><code>app.py</code></p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_core_components <span style="color: rgb(0, 151, 157);">as</span> dcc
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+app = dash.Dash(__name__)
+
+app.layout = html.Div([
+    html.Div(
+        className=<span style="color: rgb(0, 92, 95);">"app-header"</span>,
+        children=[
+            html.Div(<span style="color: rgb(0, 92, 95);">'Plotly Dash'</span>, className=<span style="color: rgb(0, 92, 95);">"app-header--title"</span>)
+        ]
+    ),
+    html.Div(
+        children=html.Div([
+            html.H5(<span style="color: rgb(0, 92, 95);">'Overview'</span>),
+            html.Div(<span style="color: rgb(0, 92, 95);">'''
+                This is an example of a simple Dash app with
+                local, customized CSS.
+            '''</span>)
+        ])
+    )
+])
+
+<span style="color: rgb(0, 151, 157);">if</span> __name__ == <span style="color: rgb(0, 92, 95);">'__main__'</span>:
+    app.run_server(debug=<span style="color: rgb(0, 151, 157);">True</span>)
+</code></pre></div><hr><div style="padding-top: 20px;"><div><p><code>typography.css</code></p></div></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">body</span> {
+    <span style="color: rgb(0, 151, 157);">font-family</span>: sans-serif;
+}
+<span style="color: rgb(0, 151, 157);">h1</span>, <span style="color: rgb(0, 151, 157);">h2</span>, <span style="color: rgb(0, 151, 157);">h3</span>, <span style="color: rgb(0, 151, 157);">h4</span>, <span style="color: rgb(0, 151, 157);">h5</span>, <span style="color: rgb(0, 151, 157);">h6</span> {
+    <span style="color: rgb(0, 151, 157);">color</span>: hotpink
+}
+</code></pre></div><hr><div style="padding-top: 20px;"><div><p><code>header.css</code></p></div></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 92, 95);">.app-header</span> {
+    <span style="color: rgb(0, 151, 157);">height</span>: <span style="color: rgb(138, 123, 82);">60px</span>;
+    <span style="color: rgb(0, 151, 157);">line-height</span>: <span style="color: rgb(138, 123, 82);">60px</span>;
+    <span style="color: rgb(0, 151, 157);">border-bottom</span>: thin lightgrey solid;
+}
+
+<span style="color: rgb(0, 92, 95);">.app-header</span> <span style="color: rgb(0, 92, 95);">.app-header--title</span> {
+    <span style="color: rgb(0, 151, 157);">font-size</span>: <span style="color: rgb(138, 123, 82);">22px</span>;
+    <span style="color: rgb(0, 151, 157);">padding-left</span>: <span style="color: rgb(138, 123, 82);">5px</span>;
+}
+</code></pre></div><hr><div style="padding-top: 20px;"><div><p><code>custom-script.js</code></p></div></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code>
+alert(<span style="color: rgb(0, 92, 95);">'If you see this alert, then your custom JavaScript script has run!'</span>)
+</code></pre></div><hr><div><p>When you run <code>app.py</code>, your app should look something like this:
+(Note that there may be some slight differences in appearance as
+the CSS from this Dash User Guide is applied to all of these embedded
+examples.)</p></div><div class="css-example" style="margin-bottom: 40px; margin-top: 40px; border: thin solid lightgrey;"><div><div class="app-header"><div class="app-header--title">Plotly Dash</div></div><div><div><h5>Overview</h5><div>
+                This is an example of a simple Dash app with
+                local, customized CSS.
+            </div></div></div></div></div><div><p>There are a few things to keep in mind when including assets automatically:</p><p>1 - The following file types will automatically be included:</p><p>A - CSS files suffixed with <code>.css</code></p><p>B - JavaScript files suffixed with <code>.js</code></p><p>C - A single file named <code>favicon.ico</code> (the page tab's icon)</p><p>2 - Dash will include the files in alphanumerical order by filename.
+So, we recommend prefixing your filenames with numbers if you need to ensure
+their order (e.g. <code>10_typography.css</code>, <code>20_header.css</code>)</p><p>3 - You can ignore certain files in your <code>assets</code> folder with a regex filter
+using <code>app = dash.Dash(assets_ignore='.*ignored.*')</code>. This will prevent Dash from
+loading files which contain the above pattern.</p><p>4 - If you want to include CSS from a remote URL, then see the next section.</p><p>5 - Your custom CSS will be included <em>after</em> the Dash component CSS</p><p>6 - It is recommended to add <code>__name__</code> to the dash init to ensure the resources
+in the assets folder are loaded, eg: <code>app = dash.Dash(__name__, meta_tags=[...])</code>.
+When you run your application through some other command line (like the
+flask command or gunicorn/waitress), the <code>__main__</code> module will no
+longer be located where <code>app.py</code> is. By explicitly setting <code>__name__</code>,
+Dash will be able to locate the relative <code>assets</code> folder correctly.</p><h3>Hot Reloading</h3><p>By default, Dash includes "hot-reloading". This means that Dash will automatically refresh your browser when you make a change in your Python code <em>and</em> your CSS code.</p><p>Give it a try: Change the color in <code>typography.css</code> from <code>hotpink</code> to <code>orange</code> and see your application update.</p><blockquote><p>Don't like hot-reloading? You can turn this off with <code>app.run_server(dev_tools_hot_reload=False)</code>.
+Learn more in <a href="https://dash.plot.ly/devtools">Dash Dev Tools documentation</a>. Questions? See the <a href="https://community.plot.ly/t/announcing-hot-reload/14177">community forum hot reloading discussion</a>.</p></blockquote></div><div><hr><h2>Load Assets from a Folder Hosted on a CDN</h2><p>If you duplicate the file structure of your local assets folder to a folder hosted
+externally to your Dash app, you can use <code>assets_external_path='http://your-external-assets-folder-url'</code>
+in the Dash constructor to load the files from there instead of locally. Dash will index your local
+assets folder to find all of your assets, map their relative path onto <code>assets_external_path</code>
+and then request the resources from there.
+<code>app.scripts.config.serve_locally = False</code> must also be set in order for this to work.</p><p><strong>Example:</strong></p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+app = dash.Dash(
+    __name__,
+    assets_external_path=<span style="color: rgb(0, 92, 95);">'http://your-external-assets-folder-url/'</span>
+)
+app.scripts.config.serve_locally = <span style="color: rgb(0, 151, 157);">False</span>
+
+</code></pre></div><div><hr><h2>Embedding Images in Your Dash Apps</h2><p>In addition to CSS and javascript files, you can include images in
+the <code>assets</code> folder. An example of the folder structure:</p><pre><code>- app.py
+- assets/
+    |-- image.png</code></pre><p>&nbsp;</p><p>In your <code>app.py</code> file you can use the relative path to that image:</p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+app = dash.Dash(__name__)
+
+app.layout = html.Div([
+    html.Img(src=<span style="color: rgb(0, 92, 95);">'/assets/image.png'</span>)
+])
+
+<span style="color: rgb(0, 151, 157);">if</span> __name__ == <span style="color: rgb(0, 92, 95);">'__main__'</span>:
+    app.run_server(debug=<span style="color: rgb(0, 151, 157);">True</span>)</code></pre></div><div><hr><h2>Adding external CSS/Javascript</h2><p>You can add resources hosted externally to your Dash app with the
+<code>external_stylesheets/stylesheets</code> init keywords.</p><p>The resources can be either a string or a dict containing the tag attributes
+(<code>src</code>, <code>integrity</code>, <code>crossorigin</code>, etc). You can mix both.</p><p>External css/js files are loaded before the assets.</p><p><strong>Example:</strong></p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+
+<span style="color: rgba(149, 165, 166, 0.8);"># external JavaScript files</span>
+external_scripts = [
+    <span style="color: rgb(0, 92, 95);">'https://www.google-analytics.com/analytics.js'</span>,
+    {<span style="color: rgb(0, 92, 95);">'src'</span>: <span style="color: rgb(0, 92, 95);">'https://cdn.polyfill.io/v2/polyfill.min.js'</span>},
+    {
+        <span style="color: rgb(0, 92, 95);">'src'</span>: <span style="color: rgb(0, 92, 95);">'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.core.js'</span>,
+        <span style="color: rgb(0, 92, 95);">'integrity'</span>: <span style="color: rgb(0, 92, 95);">'sha256-Qqd/EfdABZUcAxjOkMi8eGEivtdTkh3b65xCZL4qAQA='</span>,
+        <span style="color: rgb(0, 92, 95);">'crossorigin'</span>: <span style="color: rgb(0, 92, 95);">'anonymous'</span>
+    }
+]
+
+<span style="color: rgba(149, 165, 166, 0.8);"># external CSS stylesheets</span>
+external_stylesheets = [
+    <span style="color: rgb(0, 92, 95);">'https://codepen.io/chriddyp/pen/bWLwgP.css'</span>,
+    {
+        <span style="color: rgb(0, 92, 95);">'href'</span>: <span style="color: rgb(0, 92, 95);">'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'</span>,
+        <span style="color: rgb(0, 92, 95);">'rel'</span>: <span style="color: rgb(0, 92, 95);">'stylesheet'</span>,
+        <span style="color: rgb(0, 92, 95);">'integrity'</span>: <span style="color: rgb(0, 92, 95);">'sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'</span>,
+        <span style="color: rgb(0, 92, 95);">'crossorigin'</span>: <span style="color: rgb(0, 92, 95);">'anonymous'</span>
+    }
+]
+
+
+app = dash.Dash(__name__,
+                external_scripts=external_scripts,
+                external_stylesheets=external_stylesheets)
+
+app.layout = html.Div()
+
+<span style="color: rgb(0, 151, 157);">if</span> __name__ == <span style="color: rgb(0, 92, 95);">'__main__'</span>:
+    app.run_server(debug=<span style="color: rgb(0, 151, 157);">True</span>)
+</code></pre></div><div><hr><h2>Customizing Dash's HTML Index Template</h2><p><strong>New in dash 0.22.0</strong></p><p>Dash's UI is generated dynamically with Dash's React.js front-end. So,
+on page load, Dash serves a very small HTML template string that includes
+the CSS and JavaScript that is necessary to render the page and some simple
+HTML meta tags.</p><p>This simple HTML string is customizable. You might want to customize this
+string if you wanted to:</p><ul><li>Include a different <code>&lt;title&gt;</code> for your app (the <code>&lt;title&gt;</code> tag is the name
+that appears in your brower's tab. By default, it is "Dash")</li><li>Customize the way that your CSS or JavaScript is included in the page.
+For example, if you wanted to include remote scripts or if you wanted to
+include the CSS <em>before</em> the Dash component CSS</li><li>Include custom meta tags in your app. Note that meta tags can also be
+added with the <code>meta_tags</code> argument (example below).</li><li>Include a custom version of <code>dash-renderer</code>, by instantiating the
+<code>DashRenderer</code> class yourself. You can add request hooks this way, by providing
+a <code>hooks</code> config object as in the example below.</li></ul><h4>Usage</h4><p><strong>Option 1 - <code>index_string</code></strong></p><p>Add an <code>index_string</code> to modify the default HTML Index Template:</p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+external_stylesheets = [<span style="color: rgb(0, 92, 95);">'https://codepen.io/chriddyp/pen/bWLwgP.css'</span>]
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+app.index_string = <span style="color: rgb(0, 92, 95);">'''
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        {%metas%}
+        &lt;title&gt;{%title%}&lt;/title&gt;
+        {%favicon%}
+        {%css%}
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;My Custom header&lt;/div&gt;
+        {%app_entry%}
+        &lt;footer&gt;
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        &lt;/footer&gt;
+        &lt;div&gt;My Custom footer&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+'''</span>
+
+app.layout = html.Div(<span style="color: rgb(0, 92, 95);">'Simple Dash App'</span>)
+
+<span style="color: rgb(0, 151, 157);">if</span> __name__ == <span style="color: rgb(0, 92, 95);">'__main__'</span>:
+    app.run_server(debug=<span style="color: rgb(0, 151, 157);">True</span>)
+</code></pre></div><div><p>The <code>{%key%}</code>s are template variables that Dash will fill in automatically
+with default properties. The available keys are:</p><p><code>{%metas%}</code> (optional)</p><p>The registered meta tags included by the <code>meta_tags</code> argument in <code>dash.Dash</code></p><p><code>{%favicon%}</code> (optional)</p><p>A favicon link tag if found in the <code>assets</code> folder.</p><p><code>{%css%}</code> (optional)</p><p><code>&lt;link/&gt;</code> tags to css resources. These resources include the Dash component
+library CSS resources as well as any CSS resources found in the <code>assets</code> folder.</p><p><code>{%title%}</code> (optional)</p><p>The contents of the page <code>&lt;title&gt;</code> tag.
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">Learn more about <code>&lt;title/&gt;</code></a></p><p><code>{%config%}</code> (required)</p><p>An auto-generated tag that includes configuration settings passed from
+Dash's backend to Dash's front-end (<code>dash-renderer</code>).</p><p><code>{%app_entry%}</code> (required)</p><p>The container in which the Dash layout is rendered.</p><p><code>{%scripts%}</code> (required)</p><p>The set of JavaScript scripts required to render the Dash app.
+This includes the Dash component JavaScript files as well as any
+JavaScript files found in the <code>assets</code> folder.</p><p><code>{%renderer%}</code> (required)</p><p>The JavaScript script that instantiates <code>dash-renderer</code> by calling
+<code>new DashRenderer()</code></p><p><strong>Option 2 - <code>interpolate_index</code></strong></p><p>If your HTML content isn't static or if you would like to introspect or modify
+the templated variables, then you can override the <code>Dash.interpolate_index</code>
+method.</p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+
+<span><span style="color: rgb(0, 151, 157);">class</span> <span style="color: rgb(136, 0, 0); font-weight: bold;">CustomDash</span><span>(dash.Dash)</span>:</span>
+    <span style="color: rgb(114, 142, 0);"><span style="color: rgb(0, 151, 157);">def</span> <span style="color: rgb(136, 0, 0); font-weight: bold;">interpolate_index</span><span>(self, **kwargs)</span>:</span>
+        <span style="color: rgba(149, 165, 166, 0.8);"># Inspect the arguments by printing them</span>
+        print(kwargs)
+        <span style="color: rgb(0, 151, 157);">return</span> <span style="color: rgb(0, 92, 95);">'''
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;My App&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+                &lt;div id="custom-header"&gt;My custom header&lt;/div&gt;
+                {app_entry}
+                {config}
+                {scripts}
+                {renderer}
+                &lt;div id="custom-footer"&gt;My custom footer&lt;/div&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+        '''</span>.format(
+            app_entry=kwargs[<span style="color: rgb(0, 92, 95);">'app_entry'</span>],
+            config=kwargs[<span style="color: rgb(0, 92, 95);">'config'</span>],
+            scripts=kwargs[<span style="color: rgb(0, 92, 95);">'scripts'</span>],
+            renderer=kwargs[<span style="color: rgb(0, 92, 95);">'renderer'</span>])
+
+app = CustomDash()
+
+app.layout = html.Div(<span style="color: rgb(0, 92, 95);">'Simple Dash App'</span>)
+
+<span style="color: rgb(0, 151, 157);">if</span> __name__ == <span style="color: rgb(0, 92, 95);">'__main__'</span>:
+    app.run_server(debug=<span style="color: rgb(0, 151, 157);">True</span>)
+</code></pre></div><div><p>Unlike the <code>index_string</code> method, where we worked with template string
+variables, the keyword variables that are passed into <code>interpolate_index</code>
+are already evaluated.</p></div><div><p>In the example above, when we print the input arguments of
+<code>interpolate_index</code> we should see an output like this:</p></div><div style="overflow-x: scroll;"><div><pre><code>{
+    'title': 'Dash',
+    'app_entry': '\n&lt;div id="react-entry-point"&gt;\n    &lt;div class="_dash-loading"&gt;\n        Loading...\n    &lt;/div&gt;\n&lt;/div&gt;\n',
+    'favicon': '',
+    'metas': '&lt;meta charset="UTF-8"/&gt;',
+    'scripts': '&lt;script src="https://unpkg.com/react@15.4.2/dist/react.min.js"&gt;&lt;/script&gt;\n&lt;script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.min.js"&gt;&lt;/script&gt;\n&lt;script src="https://unpkg.com/dash-html-components@0.14.0/dash_html_components/bundle.js"&gt;&lt;/script&gt;\n&lt;script src="https://unpkg.com/dash-renderer@0.20.0/dash_renderer/bundle.js"&gt;&lt;/script&gt;',
+    'renderer': '&lt;script id="_dash-renderer" type="application/javascript"&gt;var renderer = new DashRenderer();&lt;/script&gt;',
+    'config': '&lt;script id="_dash-config" type="application/json"&gt;{"requests_pathname_prefix": "/", "url_base_pathname": "/"}&lt;/script&gt;',
+    'css': ''
+}</code></pre></div></div><div><p>The values of the <code>scripts</code> and <code>css</code> keys may be different depending on
+which component libraries you have included or which files
+might be in your assets folder.</p><hr><h2>Customizing dash-renderer with request hooks</h2><p>To instantiate your own version of <code>dash-renderer</code>, you can override Dash's HTML Index Template and provide your own script that will be used instead of the standard script. This script should
+somewhere call <code>var renderer = new DashRenderer();</code>, which instantiates the <code>DashRenderer</code> class. You can add this script to your index HTML when you're setting
+<code>app.index_string</code>, or you could simply override <code>app.renderer</code> like so:</p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+external_stylesheets = [<span style="color: rgb(0, 92, 95);">'https://codepen.io/chriddyp/pen/bWLwgP.css'</span>]
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+app.renderer = <span style="color: rgb(0, 92, 95);">'var renderer = new DashRenderer();'</span>
+
+app.layout = html.Div(<span style="color: rgb(0, 92, 95);">'Simple Dash App'</span>)
+
+<span style="color: rgb(0, 151, 157);">if</span> __name__ == <span style="color: rgb(0, 92, 95);">'__main__'</span>:
+    app.run_server(debug=<span style="color: rgb(0, 151, 157);">True</span>)
+</code></pre></div><div><p>When you provide your own DashRenderer, you can also pass in a <code>hooks</code> object that holds <code>request_pre</code> and <code>request_post</code> functions. These request hooks will be fired
+before and after Dash makes a request to its backend. Here's an example:</p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+external_stylesheets = [<span style="color: rgb(0, 92, 95);">'https://codepen.io/chriddyp/pen/bWLwgP.css'</span>]
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+app.renderer = <span style="color: rgb(0, 92, 95);">'''
+var renderer = new DashRenderer({
+    request_pre: (payload) =&gt; {
+        // print out payload parameter
+        console.log(payload);
+    },
+    request_post: (payload, response) =&gt; {
+        // print out payload and response parameter
+        console.log(payload);
+        console.log(response);
+    }
+})
+'''</span>
+
+app.layout = html.Div(<span style="color: rgb(0, 92, 95);">'Simple Dash App'</span>)
+
+<span style="color: rgb(0, 151, 157);">if</span> __name__ == <span style="color: rgb(0, 92, 95);">'__main__'</span>:
+    app.run_server(debug=<span style="color: rgb(0, 151, 157);">True</span>)
+</code></pre></div><div><p>Notice the <code>request_pre</code> function takes the payload of the request being sent as its argument, and the <code>request_post</code> fuction takes both the payload and the response of the server
+as arguments. These can be altered in our function, allowing you to modify the response and request objects that Dash sends to the server. In the example above, the <code>request_pre</code>
+function is fired before each server call, and in the case of this example, it will <code>console.log()</code> the request parameter. The <code>request_post</code> function will fire <strong>after</strong> each server
+call, and in our example will also print out the response parameter.</p><hr><h2>Customizing Meta Tags</h2><blockquote><p>Not sure what meta tags are?
+<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">Check out this tutorial on meta tags and why you might want to use them</a>.</p></blockquote><p>To add custom meta tags to your application, you can always override Dash's
+HTML Index Template. Alternatively, Dash provides a shortcut:
+you can specify meta tags directly in the Dash constructor:</p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid rgb(200, 212, 227);"><code><span style="color: rgb(0, 151, 157);">import</span> dash
+<span style="color: rgb(0, 151, 157);">import</span> dash_html_components <span style="color: rgb(0, 151, 157);">as</span> html
+
+app = dash.Dash(meta_tags=[
+    <span style="color: rgba(149, 165, 166, 0.8);"># A description of the app, used by e.g.</span>
+    <span style="color: rgba(149, 165, 166, 0.8);"># search engines when displaying search results.</span>
+    {
+        <span style="color: rgb(0, 92, 95);">'name'</span>: <span style="color: rgb(0, 92, 95);">'description'</span>,
+        <span style="color: rgb(0, 92, 95);">'content'</span>: <span style="color: rgb(0, 92, 95);">'My description'</span>
+    },
+    <span style="color: rgba(149, 165, 166, 0.8);"># A tag that tells Internet Explorer (IE)</span>
+    <span style="color: rgba(149, 165, 166, 0.8);"># to use the latest renderer version available</span>
+    <span style="color: rgba(149, 165, 166, 0.8);"># to that browser (e.g. Edge)</span>
+    {
+        <span style="color: rgb(0, 92, 95);">'http-equiv'</span>: <span style="color: rgb(0, 92, 95);">'X-UA-Compatible'</span>,
+        <span style="color: rgb(0, 92, 95);">'content'</span>: <span style="color: rgb(0, 92, 95);">'IE=edge'</span>
+    },
+    <span style="color: rgba(149, 165, 166, 0.8);"># A tag that tells the browser not to scale</span>
+    <span style="color: rgba(149, 165, 166, 0.8);"># desktop widths to fit mobile screens.</span>
+    <span style="color: rgba(149, 165, 166, 0.8);"># Sets the width of the viewport (browser)</span>
+    <span style="color: rgba(149, 165, 166, 0.8);"># to the width of the device, and the zoom level</span>
+    <span style="color: rgba(149, 165, 166, 0.8);"># (initial scale) to 1.</span>
+    <span style="color: rgba(149, 165, 166, 0.8);">#</span>
+    <span style="color: rgba(149, 165, 166, 0.8);"># Necessary for "true" mobile support.</span>
+    {
+      <span style="color: rgb(0, 92, 95);">'name'</span>: <span style="color: rgb(0, 92, 95);">'viewport'</span>,
+      <span style="color: rgb(0, 92, 95);">'content'</span>: <span style="color: rgb(0, 92, 95);">'width=device-width, initial-scale=1.0'</span>
+    }
+])
+
+app.layout = html.Div(<span style="color: rgb(0, 92, 95);">'Simple Dash App'</span>)
+
+<span style="color: rgb(0, 151, 157);">if</span> __name__ == <span style="color: rgb(0, 92, 95);">'__main__'</span>:
+    app.run_server(debug=<span style="color: rgb(0, 151, 157);">True</span>)
+</code></pre></div><div><p>If you inspect the source of your app, you should see the meta tags appear:
+<img alt="Dash App with Custom Meta Tags" src="./Dash User Guide and Documentation - Dash by Plotly_files/43233036-cd050eae-9028-11e8-910e-f0d140c37e4c.png"></p><hr><h2>Serving Dash's Component Libraries Locally or from a CDN</h2><p>Dash's component libraries, like <code>dash_core_components</code> and <code>dash_html_components</code>,
+are bundled with JavaScript and CSS files. Dash automatically checks with
+component libraries are being used in your application and will automatically
+serve these files in order to render the application.</p><p>By default, dash serves the JavaScript and CSS resources from the
+online CDNs. This is usually much faster than loading the resources
+from the file system.</p><p>However, if you are working in an offline or firewalled environment or
+if the CDN is unavailable, then your dash app itself can serve these
+files. These files are stored as part of the component's site-packages
+folder.</p><p>Here's how to enable this option:</p></div><div><pre loading_state="[object Object]" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84); border-left: thin solid lightgrey;"><code><span style="color: rgb(0, 151, 157);">from</span> dash <span style="color: rgb(0, 151, 157);">import</span> Dash
+
+app = Dash()
+
+app.css.config.serve_locally = <span style="color: rgb(0, 151, 157);">True</span>
+app.scripts.config.serve_locally = <span style="color: rgb(0, 151, 157);">True</span></code></pre></div><div><p>Note that in the future, we will likely make "offline" the default option.
+<a href="https://github.com/plotly/dash/issues/284">Follow dash#284</a> for more information.</p><hr><h2>Sample Dash CSS Stylesheet</h2><p>Currently, Dash does not include styles by default.</p><p>To get started with Dash styles, we recommend starting with this <a href="https://codepen.io/chriddyp/pen/bWLwgP?editors=1100">CSS stylesheet</a> hosted
+on <a href="https://codepen.io/">Codepen</a>.</p><p>To include this stylesheet in your application, copy and paste it into a file
+in your <code>assets</code> folder. You can view the raw CSS source here:
+<a href="https://codepen.io/chriddyp/pen/bWLwgP.css">https://codepen.io/chriddyp/pen/bWLwgP.css</a>.</p><p>Here is an embedded version of this stylesheet.</p></div><iframe src="./Dash User Guide and Documentation - Dash by Plotly_files/saved_resource.html" style="height: 400px; width: 100%; border: none;"></iframe></div></div><hr><a href="https://dash.plot.ly/"><a>Back to the Table of Contents</a></a><div id="wait-for-page-/external-resources"></div></div></div></div></div></div></div></div>
+
+        <footer>
+            <script id="_dash-config" type="application/json">{"props_check": false, "url_base_pathname": null, "ui": false, "requests_pathname_prefix": "/"}</script>
+            <script src="./Dash User Guide and Documentation - Dash by Plotly_files/react@16.8.6.min.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/react-dom@16.8.6.min.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/bundle.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/dash_canvas.min.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/plotly-1.47.0.min.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/dash_core_components.min.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/dash_html_components.min.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/bundle.js(1).下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/bundle.js(2).下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/dash_cytoscape.min.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/instantsearch.min.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/plotly_ga.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/search.js.下载"></script>
+<script src="./Dash User Guide and Documentation - Dash by Plotly_files/dash_renderer.min.js.下载"></script>
+            <script id="_dash-renderer" type="application/javascript">var renderer = new DashRenderer();</script>
+        </footer><script type="text/javascript" id="">piAId="720653";piCId="2996";piHostname="pi.pardot.com";(function(){function a(){var b=document.createElement("script");b.type="text/javascript";b.src=("https:"==document.location.protocol?"https://pi":"http://cdn")+".pardot.com/pd.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)}window.attachEvent?window.attachEvent("onload",a):window.addEventListener("load",a,!1)})();</script>
+    
+</body></html>

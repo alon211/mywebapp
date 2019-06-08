@@ -1,9 +1,8 @@
-from plotly.graph_objs.layout import*
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import os
-external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets=[r'C:\Users\admin\PycharmProjects\mywebapp\bWLwgP.css']
 app=dash.Dash(__name__, external_stylesheets=external_stylesheets)
 colors = {
     'background': '#111111',
@@ -41,24 +40,6 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         }
     )
 ])
-# app.layout=html.Div(style={'backgroundColor':'black'},
-#                     children=[html.H1(children='hello dash',
-#                                       style={
-#                                              'text-align':'center',
-#                                             'color':'skyblue'
-#                                         }),
-#                     html.Div([html.P(children='Dash: A web application framework for Python.')
-#                                 ,dcc.Graph(
-#                                     id='example-dash',
-#                                     figure={
-#                                         'data':[
-#                                             {'x':[1,2,3],'y':[4,5,6],'type':'bar','name':'A'},
-#                                             {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar','name':'B'}
-#                                         ],
-#                                         'layout':{'title':'Dash Data visualision'}
-#                                     }
-#
-#                     )])])
 app.run_server(debug=True,port=8000)
 
 

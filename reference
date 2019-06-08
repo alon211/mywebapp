@@ -11,6 +11,9 @@ https://nbviewer.jupyter.org/github/plotly/python-user-guide/blob/master/s0_gett
 from plotly.graph_objs import Data, Layout, Figure
 help(Figure) 
 
+导入外部CSS
+https://dash.plot.ly/external-resources
+
 git 只下载github指定文件夹
 git init
 git remote rm origin
