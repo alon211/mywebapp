@@ -24,3 +24,6 @@ git checkout brachname or foldname
 git操作
 廖雪峰GIT教程:https://www.liaoxuefeng.com/wiki/896043488029600/900003767775424
 https://blog.csdn.net/u013851082/article/details/73105579
+
+git上传到远程其他分支
+git push origin home-pc(本地):home-pc(远程)
