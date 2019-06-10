@@ -1,4 +1,4 @@
-图标样式参考:
+图表样式参考，可以在下面网址配置好，需要的代码自然会出来:
 https://plot.ly/create/?fid=etpinard:163#/
 
 可在plotly.graph_objs.layout下面看到以下信息：
