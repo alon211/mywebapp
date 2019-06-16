@@ -60,6 +60,7 @@ def generate_graph(id,lines):
         }
     )
 d=eval(df.to_json())
+df.to_json('1.json')
 x=list(d['state'].values())
 y_all_axis=[list(d[col_name].values()) for col_name in df.columns][1:]
 lines=[generate_line(x=x,y=y_all_axis[i],name=df.columns[i]) for i in range(len(df.columns)-1)]
